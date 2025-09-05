@@ -55,7 +55,7 @@ const HostsSection = () => {
                     </div>
 
                     {/* Hosts Cards */}
-                    <div className="grid md:grid-cols-2 gap-8 mb-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12">
                         {hosts.map((host, index) => (
                             <div
                                 key={host.id}
@@ -63,22 +63,22 @@ const HostsSection = () => {
                                 style={{ animationDelay: `${index * 0.1}s` }}
                             >
                                 {/* GitHub-style Header */}
-                                <div className="bg-code-bg border-b border-border p-6">
-                                    <div className="flex items-center space-x-4">
-                                        <div className="w-40 h-40 rounded-full overflow-hidden bg-terminal-green/10 border-2 border-terminal-green/30 group-hover:border-terminal-green transition-all duration-300">
+                                <div className="bg-code-bg border-b border-border p-4 sm:p-6">
+                                    <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4">
+                                        <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden bg-terminal-green/10 border-2 border-terminal-green/30 group-hover:border-terminal-green transition-all duration-300 flex-shrink-0">
                                             <img
                                                 src={host.avatar}
                                                 alt={host.name}
                                                 className="w-full h-full object-cover"
                                             />
                                         </div>
-                                        <div className="flex-1">
-                                            <h3 className="text-xl font-bold font-space text-foreground group-hover:text-terminal-green transition-colors duration-300">
+                                        <div className="flex-1 text-center sm:text-left">
+                                            <h3 className="text-lg sm:text-xl font-bold font-space text-foreground group-hover:text-terminal-green transition-colors duration-300">
                                                 {host.name}
                                             </h3>
-                                            <p className="text-muted-foreground text-sm">{host.role}</p>
+                                            <p className="text-muted-foreground text-xs sm:text-sm mt-1">{host.role}</p>
                                         </div>
-                                        <div className="flex space-x-2 flex-wrap">
+                                        <div className="flex space-x-2 flex-wrap justify-center sm:justify-end">
                                             <a
                                                 href={host.social.github}
                                                 target="_blank"
@@ -97,7 +97,6 @@ const HostsSection = () => {
                                             >
                                                 <Instagram className="w-4 h-4 text-terminal-green" />
                                             </a>
-
                                             <a
                                                 href={host.social.linkedin}
                                                 target="_blank"
@@ -112,24 +111,24 @@ const HostsSection = () => {
                                 </div>
 
                                 {/* Bio Section */}
-                                <div className="p-6">
-                                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                                <div className="p-4 sm:p-6">
+                                    <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                                         {host.bio}
                                     </p>
 
                                     {/* Tech Stack */}
-                                    <div className="mb-6">
-                                        <div className="text-sm font-semibold text-foreground mb-2 font-mono">
+                                    <div className="mb-4 sm:mb-6">
+                                        <div className="text-xs sm:text-sm font-semibold text-foreground mb-2 font-mono">
                                             <span className="text-terminal-green">const</span> techStack = [
                                         </div>
-                                        <div className="flex flex-wrap gap-2 ml-4">
+                                        <div className="flex flex-wrap gap-1 sm:gap-2 ml-2 sm:ml-4">
                                             {host.techStack.map((tech, techIndex) => (
-                                                <span key={techIndex} className="px-2 py-1 bg-terminal-green/10 text-terminal-green text-xs rounded font-mono">
+                                                <span key={techIndex} className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-terminal-green/10 text-terminal-green text-xs rounded font-mono">
                                                     {tech}
                                                 </span>
                                             ))}
                                         </div>
-                                        <div className="text-sm font-semibold text-foreground font-mono">];</div>
+                                        <div className="text-xs sm:text-sm font-semibold text-foreground font-mono">];</div>
                                     </div>
 
                                     {/* CTA Button */}

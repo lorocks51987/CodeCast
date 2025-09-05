@@ -31,10 +31,10 @@ const HeroSection = () => {
             {/* Matrix Background Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-terminal-bg/50 to-terminal-bg z-10"></div>
 
-            <div className="container mx-auto px-4 text-center relative z-20">
+            <div className="container mx-auto px-4 text-center relative z-20 pt-20 sm:pt-24 lg:pt-28">
                 <div className="max-w-4xl mx-auto space-y-8 pb-24 md:pb-28 lg:pb-32 animate-fade-in">
                     {/* Terminal Prompt */}
-                    <div className="font-mono text-terminal-green text-left max-w-2xl mx-auto">
+                    <div className="font-mono text-terminal-green text-left max-w-2xl mx-auto text-sm sm:text-base">
                         <span className="text-muted-foreground">user@codecast:~$</span> start_podcast
                     </div>
 

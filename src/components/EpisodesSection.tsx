@@ -122,7 +122,7 @@ const EpisodesSection = () => {
                     </div>
 
                     {/* Episodes Grid */}
-                    <div className="grid lg:grid-cols-2 gap-8 mb-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12">
                         {episodes.map((episode, index) => (
                             <div
                                 key={episode.id}
@@ -145,22 +145,22 @@ const EpisodesSection = () => {
                                     })()}
 
                                     {/* Duration Badge */}
-                                    <div className="absolute bottom-4 right-4 bg-terminal-bg/90 text-terminal-green font-mono text-xs px-2 py-1 rounded">
+                                    <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 bg-terminal-bg/90 text-terminal-green font-mono text-xs px-2 py-1 rounded">
                                         {episode.duration}
                                     </div>
                                 </div>
 
                                 {/* Episode Info */}
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold font-space mb-3 text-foreground group-hover:text-terminal-green transition-colors duration-300">
+                                <div className="p-4 sm:p-6">
+                                    <h3 className="text-lg sm:text-xl font-bold font-space mb-2 sm:mb-3 text-foreground group-hover:text-terminal-green transition-colors duration-300 line-clamp-2">
                                         {episode.title}
                                     </h3>
-                                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                                    <p className="text-muted-foreground mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base line-clamp-3">
                                         {episode.description}
                                     </p>
 
                                     {/* Action Buttons */}
-                                    <div className="flex flex-col sm:flex-row gap-3">
+                                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                                         <NeonButton
                                             href={(() => {
                                                 const id = extractYouTubeId(episode.youtubeId || episode.youtubeUrl);
@@ -172,7 +172,8 @@ const EpisodesSection = () => {
                                             className="flex-1"
                                         >
                                             <Youtube className="w-4 h-4 mr-2" />
-                                            Assistir no YouTube
+                                            <span className="hidden sm:inline">Assistir no YouTube</span>
+                                            <span className="sm:hidden">YouTube</span>
                                         </NeonButton>
                                     </div>
                                 </div>
