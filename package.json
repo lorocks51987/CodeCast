@@ -1,7 +1,9 @@
 {
-    "name": "vite_react_shadcn_ts",
+    "name": "codecast-website",
     "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
+    "description": "Site oficial do CodeCast - Podcast da UNIMAR sobre tecnologia",
+    "author": "CodeCast UNIMAR",
     "type": "module",
     "scripts": {
         "dev": "vite",
