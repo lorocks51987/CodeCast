@@ -1,4 +1,5 @@
 import { Instagram, Youtube } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import NeonButton from './NeonButton';
 
 type Episode = {
@@ -30,6 +31,18 @@ function extractYouTubeId(input?: string): string {
 }
 
 const EpisodesSection = () => {
+    const [visibleCount, setVisibleCount] = useState(4);
+    const increment = 2;
+
+    useEffect(() => {
+        try {
+            const isMobile = window.matchMedia('(max-width: 640px)').matches;
+            setVisibleCount(isMobile ? 2 : 4);
+        } catch (_) {
+            // noop (SSR/older browsers)
+        }
+    }, []);
+
     const episodes: Episode[] = [
         {
             id: 1,
@@ -123,7 +136,7 @@ const EpisodesSection = () => {
 
                     {/* Episodes Grid */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-12">
-                        {episodes.map((episode, index) => (
+                        {episodes.slice(0, visibleCount).map((episode, index) => (
                             <div
                                 key={episode.id}
                                 className="group bg-card border border-border rounded-lg overflow-hidden hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up"
@@ -139,6 +152,7 @@ const EpisodesSection = () => {
                                                 src={src}
                                                 title={episode.title}
                                                 className="w-full h-full"
+                                                loading="lazy"
                                                 allowFullScreen
                                             />
                                         );
@@ -180,6 +194,18 @@ const EpisodesSection = () => {
                             </div>
                         ))}
                     </div>
+
+                    {visibleCount < episodes.length && (
+                        <div className="text-center mb-12">
+                            <NeonButton
+                                onClick={() => setVisibleCount((count) => Math.min(count + increment, episodes.length))}
+                                size="md"
+                                variant="secondary"
+                            >
+                                Ver mais
+                            </NeonButton>
+                        </div>
+                    )}
 
                     {/* Call to Action */}
                     <div className="text-center">
