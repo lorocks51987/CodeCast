@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://codecast.unimar.br/sitemap.xml
