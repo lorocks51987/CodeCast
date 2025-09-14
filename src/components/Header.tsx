@@ -1,5 +1,6 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, X, BarChart3 } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,12 +45,13 @@ const Header = () => {
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-                        {['apresentadores', 'sobre', 'episodios', 'convidados', 'contato'].map((item) => (
+                        {['apresentadores', 'sobre', 'episodios', 'convidados', 'dashboard', 'contato'].map((item) => (
                             <button
                                 key={item}
                                 onClick={() => scrollToSection(item)}
-                                className="terminal-text hover:text-terminal-green transition-colors duration-300 font-mono capitalize relative group text-sm xl:text-base whitespace-nowrap"
+                                className="terminal-text hover:text-terminal-green transition-colors duration-300 font-mono capitalize relative group text-sm xl:text-base whitespace-nowrap flex items-center gap-2"
                             >
+                                {item === 'dashboard' && <BarChart3 className="h-4 w-4" />}
                                 {item}
                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-terminal-green transition-all duration-300 group-hover:w-full"></span>
                             </button>
@@ -70,13 +72,14 @@ const Header = () => {
                 {isMenuOpen && (
                     <div className="lg:hidden mt-4 py-4 border-t border-terminal-green/30 bg-terminal-bg/95 backdrop-blur-sm rounded-lg mx-2">
                         <div className="flex flex-col space-y-2">
-                            {['apresentadores', 'sobre', 'episodios', 'convidados', 'contato'].map((item) => (
+                            {['apresentadores', 'sobre', 'episodios', 'convidados', 'dashboard', 'contato'].map((item) => (
                                 <button
                                     key={item}
                                     onClick={() => scrollToSection(item)}
-                                    className="terminal-text hover:text-terminal-green transition-colors duration-300 font-mono capitalize text-left py-3 px-4 text-base rounded-md hover:bg-terminal-green/10 touch-target"
+                                    className="terminal-text hover:text-terminal-green transition-colors duration-300 font-mono capitalize text-left py-3 px-4 text-base rounded-md hover:bg-terminal-green/10 touch-target flex items-center"
                                 >
                                     <span className="text-terminal-green mr-3">{'>'}</span>
+                                    {item === 'dashboard' && <BarChart3 className="h-4 w-4 text-terminal-green mr-2" />}
                                     {item}
                                 </button>
                             ))}

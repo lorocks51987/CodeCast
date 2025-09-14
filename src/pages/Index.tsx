@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import HostsSection from '@/components/HostsSection';
 import MatrixBackground from '@/components/MatrixBackground';
+import DashboardSection from '@/components/DashboardSection';
 
 const Index = () => {
     return (
@@ -24,6 +25,7 @@ const Index = () => {
                 <AboutSection />
                 <EpisodesSection />
                 <GuestsSection />
+                <DashboardSection />
                 <ContactSection />
             </main>
 
