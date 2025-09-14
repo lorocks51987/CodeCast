@@ -147,79 +147,79 @@ const DashboardSection = () => {
                     </div>
 
                     {/* Stats Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                        <div className="group bg-card border border-border rounded-lg p-6 hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up">
-                            <div className="flex items-center justify-between mb-4">
-                                <div className="p-2 bg-terminal-green/10 rounded-lg">
-                                    <Eye className="h-6 w-6 text-terminal-green" />
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-12 sm:mb-16">
+                        <div className="group bg-card border border-border rounded-lg p-3 sm:p-4 lg:p-6 hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up">
+                            <div className="flex items-center justify-between mb-2 sm:mb-4">
+                                <div className="p-1.5 sm:p-2 bg-terminal-green/10 rounded-lg">
+                                    <Eye className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-terminal-green" />
                                 </div>
                                 <div className="text-right">
-                                    <div className="text-3xl font-bold terminal-text">
+                                    <div className="text-xl sm:text-2xl lg:text-3xl font-bold terminal-text">
                                         {formatNumber(channelStats?.viewCount || '0')}
                                     </div>
-                                    <p className="text-sm text-muted-foreground">Visualizações</p>
+                                    <p className="text-xs sm:text-sm text-muted-foreground">Visualizações</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="group bg-card border border-border rounded-lg p-6 hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up" style={{ animationDelay: '0.1s' }}>
-                            <div className="flex items-center justify-between mb-4">
-                                <div className="p-2 bg-terminal-green/10 rounded-lg">
-                                    <Users className="h-6 w-6 text-terminal-green" />
+                        <div className="group bg-card border border-border rounded-lg p-3 sm:p-4 lg:p-6 hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up" style={{ animationDelay: '0.1s' }}>
+                            <div className="flex items-center justify-between mb-2 sm:mb-4">
+                                <div className="p-1.5 sm:p-2 bg-terminal-green/10 rounded-lg">
+                                    <Users className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-terminal-green" />
                                 </div>
                                 <div className="text-right">
-                                    <div className="text-3xl font-bold terminal-text">
+                                    <div className="text-xl sm:text-2xl lg:text-3xl font-bold terminal-text">
                                         {formatNumber(channelStats?.subscriberCount || '0')}
                                     </div>
-                                    <p className="text-sm text-muted-foreground">Inscritos</p>
+                                    <p className="text-xs sm:text-sm text-muted-foreground">Inscritos</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="group bg-card border border-border rounded-lg p-6 hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                            <div className="flex items-center justify-between mb-4">
-                                <div className="p-2 bg-terminal-green/10 rounded-lg">
-                                    <Play className="h-6 w-6 text-terminal-green" />
+                        <div className="group bg-card border border-border rounded-lg p-3 sm:p-4 lg:p-6 hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                            <div className="flex items-center justify-between mb-2 sm:mb-4">
+                                <div className="p-1.5 sm:p-2 bg-terminal-green/10 rounded-lg">
+                                    <Play className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-terminal-green" />
                                 </div>
                                 <div className="text-right">
-                                    <div className="text-3xl font-bold terminal-text">
+                                    <div className="text-xl sm:text-2xl lg:text-3xl font-bold terminal-text">
                                         {formatNumber(channelStats?.videoCount || '0')}
                                     </div>
-                                    <p className="text-sm text-muted-foreground">Vídeos</p>
+                                    <p className="text-xs sm:text-sm text-muted-foreground">Vídeos</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="group bg-card border border-border rounded-lg p-6 hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up" style={{ animationDelay: '0.3s' }}>
-                            <div className="flex items-center justify-between mb-4">
-                                <div className="p-2 bg-terminal-green/10 rounded-lg">
-                                    <ThumbsUp className="h-6 w-6 text-terminal-green" />
+                        <div className="group bg-card border border-border rounded-lg p-3 sm:p-4 lg:p-6 hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up" style={{ animationDelay: '0.3s' }}>
+                            <div className="flex items-center justify-between mb-2 sm:mb-4">
+                                <div className="p-1.5 sm:p-2 bg-terminal-green/10 rounded-lg">
+                                    <ThumbsUp className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-terminal-green" />
                                 </div>
                                 <div className="text-right">
-                                    <div className="text-3xl font-bold terminal-text">
+                                    <div className="text-xl sm:text-2xl lg:text-3xl font-bold terminal-text">
                                         {formatNumber(
                                             latestVideos?.reduce((total, video) =>
                                                 total + parseInt(video.likeCount || '0'), 0
                                             ) || '0'
                                         )}
                                     </div>
-                                    <p className="text-sm text-muted-foreground">Curtidas</p>
+                                    <p className="text-xs sm:text-sm text-muted-foreground">Curtidas</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Latest Podcast and Stats */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
                         {/* Latest Podcast */}
-                        <div className="bg-card border border-border rounded-lg p-6 hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up">
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="p-2 bg-terminal-green/10 rounded-lg">
-                                    <Play className="h-6 w-6 text-terminal-green" />
+                        <div className="bg-card border border-border rounded-lg p-4 sm:p-6 hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up">
+                            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                                <div className="p-1.5 sm:p-2 bg-terminal-green/10 rounded-lg">
+                                    <Play className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-terminal-green" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold terminal-text">Último Podcast</h3>
-                                    <p className="text-muted-foreground">Postado mais recentemente</p>
+                                    <h3 className="text-lg sm:text-xl font-bold terminal-text">Último Podcast</h3>
+                                    <p className="text-sm sm:text-base text-muted-foreground">Postado mais recentemente</p>
                                 </div>
                             </div>
 
@@ -229,14 +229,14 @@ const DashboardSection = () => {
                                         <img
                                             src={getHighQualityThumbnail(latestVideo.id)}
                                             alt={latestVideo.title}
-                                            className="w-full h-48 object-cover rounded-lg border border-border"
+                                            className="w-full h-40 sm:h-48 object-cover rounded-lg border border-border"
                                         />
                                         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
                                             <button
                                                 onClick={() => window.open(`https://youtube.com/watch?v=${latestVideo.id}`, '_blank')}
-                                                className="bg-terminal-green text-terminal-bg px-6 py-3 rounded-lg font-medium hover:bg-terminal-green/90 transition-colors flex items-center gap-2"
+                                                className="bg-terminal-green text-terminal-bg px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-medium hover:bg-terminal-green/90 transition-colors flex items-center gap-2 text-sm sm:text-base"
                                             >
-                                                <Play className="h-5 w-5" />
+                                                <Play className="h-4 w-4 sm:h-5 sm:w-5" />
                                                 Assistir
                                             </button>
                                         </div>
@@ -246,10 +246,10 @@ const DashboardSection = () => {
                                     </div>
 
                                     <div>
-                                        <h4 className="text-lg font-medium text-foreground mb-2 line-clamp-2">
+                                        <h4 className="text-base sm:text-lg font-medium text-foreground mb-2 line-clamp-2">
                                             {latestVideo.title}
                                         </h4>
-                                        <p className="text-sm text-muted-foreground">
+                                        <p className="text-xs sm:text-sm text-muted-foreground">
                                             Publicado em {formatDate(latestVideo.publishedAt)}
                                         </p>
                                     </div>
@@ -263,29 +263,29 @@ const DashboardSection = () => {
                         </div>
 
                         {/* Video Stats */}
-                        <div className="bg-card border border-border rounded-lg p-6 hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up" style={{ animationDelay: '0.1s' }}>
-                            <div className="flex items-center gap-3 mb-6">
-                                <div className="p-2 bg-terminal-green/10 rounded-lg">
-                                    <BarChart3 className="h-6 w-6 text-terminal-green" />
+                        <div className="bg-card border border-border rounded-lg p-4 sm:p-6 hover:border-terminal-green transition-all duration-300 hover:shadow-neon animate-slide-up" style={{ animationDelay: '0.1s' }}>
+                            <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                                <div className="p-1.5 sm:p-2 bg-terminal-green/10 rounded-lg">
+                                    <BarChart3 className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-terminal-green" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold terminal-text">Estatísticas do Vídeo</h3>
-                                    <p className="text-muted-foreground">Visualizações, likes e engajamento</p>
+                                    <h3 className="text-lg sm:text-xl font-bold terminal-text">Estatísticas do Vídeo</h3>
+                                    <p className="text-sm sm:text-base text-muted-foreground">Visualizações, likes e engajamento</p>
                                 </div>
                             </div>
 
                             {latestVideo ? (
-                                <div className="space-y-6">
+                                <div className="space-y-4 sm:space-y-6">
                                     {/* Main Stats */}
-                                    <div className="grid grid-cols-2 gap-4">
-                                        <div className="text-center p-4 bg-muted/30 rounded-lg">
-                                            <div className="text-3xl font-bold terminal-text mb-1">
+                                    <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                                        <div className="text-center p-3 sm:p-4 bg-muted/30 rounded-lg">
+                                            <div className="text-2xl sm:text-3xl font-bold terminal-text mb-1">
                                                 {formatNumber(latestVideo.viewCount)}
                                             </div>
                                             <p className="text-xs text-muted-foreground">Visualizações</p>
                                         </div>
-                                        <div className="text-center p-4 bg-muted/30 rounded-lg">
-                                            <div className="text-3xl font-bold terminal-text mb-1">
+                                        <div className="text-center p-3 sm:p-4 bg-muted/30 rounded-lg">
+                                            <div className="text-2xl sm:text-3xl font-bold terminal-text mb-1">
                                                 {formatNumber(latestVideo.likeCount)}
                                             </div>
                                             <p className="text-xs text-muted-foreground">Curtidas</p>
@@ -293,10 +293,10 @@ const DashboardSection = () => {
                                     </div>
 
                                     {/* Engagement Rate */}
-                                    <div className="p-4 bg-muted/30 rounded-lg">
+                                    <div className="p-3 sm:p-4 bg-muted/30 rounded-lg">
                                         <div className="flex items-center justify-between mb-2">
-                                            <span className="text-sm font-medium text-foreground">Taxa de Engajamento</span>
-                                            <span className="text-sm terminal-text">
+                                            <span className="text-xs sm:text-sm font-medium text-foreground">Taxa de Engajamento</span>
+                                            <span className="text-xs sm:text-sm terminal-text">
                                                 {((parseInt(latestVideo.likeCount || '0') / parseInt(latestVideo.viewCount || '1')) * 100).toFixed(1)}%
                                             </span>
                                         </div>
@@ -314,7 +314,7 @@ const DashboardSection = () => {
                                     {/* Action Button */}
                                     <button
                                         onClick={() => window.open(`https://youtube.com/watch?v=${latestVideo.id}`, '_blank')}
-                                        className="w-full bg-terminal-green text-terminal-bg py-3 rounded-lg font-medium hover:bg-terminal-green/90 transition-colors flex items-center justify-center gap-2"
+                                        className="w-full bg-terminal-green text-terminal-bg py-2.5 sm:py-3 rounded-lg font-medium hover:bg-terminal-green/90 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
                                     >
                                         <ExternalLink className="h-4 w-4" />
                                         Ver no YouTube
