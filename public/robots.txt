@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://codecast.unimar.br/sitemap.xml
+Sitemap: https://code-cast-two.vercel.app/sitemap.xml
