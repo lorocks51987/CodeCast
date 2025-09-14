@@ -1,50 +1,18 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
     Play,
     ThumbsUp,
     Eye,
-    Calendar,
-    TrendingUp,
     Users,
-    Clock,
     ExternalLink,
-    BarChart3,
-    Star
+    BarChart3
 } from 'lucide-react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
 import { useYouTubeData } from '@/hooks/useYouTubeData';
 
-interface VideoData {
-    id: string;
-    title: string;
-    publishedAt: string;
-    viewCount: string;
-    likeCount: string;
-    thumbnail: string;
-    duration: string;
-}
-
-interface ChannelStats {
-    subscriberCount: string;
-    viewCount: string;
-    videoCount: string;
-}
-
-interface AnalyticsData {
-    date: string;
-    views: number;
-    subscribers: number;
-    videos: number;
-}
 
 const DashboardSection = () => {
     const {
         channelStats,
         latestVideos,
-        analyticsData,
         isLoading,
         error
     } = useYouTubeData();
