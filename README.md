@@ -1,113 +1,64 @@
 # 🎙️ CodeCast
 
-> **Histórias de quem faz a tecnologia acontecer** — um podcast da UNIMAR
+> Histórias de quem faz a tecnologia acontecer — um podcast da UNIMAR
 
-Site oficial do CodeCast, podcast apresentado por **Luiz** e **André** da Universidade de Marília (UNIMAR), trazendo convidados da tecnologia para compartilhar experiências, aprendizados e trajetórias.
+O CodeCast é o podcast da Universidade de Marília (UNIMAR) apresentado por **Luiz** e **André**. A cada episódio, recebemos pessoas da tecnologia para conversar sobre carreira, projetos, desafios e bastidores do mundo dev.
 
-## 🚀 Como rodar localmente
+## 🔊 Onde ouvir
 
-### Requisitos
-- Node.js (versão 18 ou superior)
-- npm ou yarn
+- YouTube: @codecast_unimar
+- Instagram: @codecast_unimar
+- TikTok: @codecast_unimar
 
-### Passos
+## 👥 Apresentadores
+
+- Luiz Henrique — Desenvolvimento Web e Cibersegurança
+- André Luís — Back-end e Cibersegurança
+
+## ✨ O que você encontra
+
+- Conversas reais com profissionais de tecnologia
+- Dicas práticas de carreira, estudos e mercado
+- Convidados de diferentes áreas (dev, segurança, dados, design e mais)
+
+## 🧭 Seções do site
+
+- Hero — apresentação do CodeCast
+- Apresentadores — quem conduz o podcast
+- Sobre — nosso propósito
+- Episódios — últimos vídeos/publicações
+- Dashboard — métricas do canal 
+- Convidados — destaques de quem já passou por aqui
+- Contato — nossas redes
+
+## 📬 Quer participar?
+
+Tem uma história para compartilhar ou quer sugerir um convidado? Fale com a gente no Instagram @codecast_unimar.
+
+## 🛠️ Desenvolvimento (rápido)
+
+Para rodar localmente:
 
 ```bash
-# 1) Clone o repositório
-git clone https://github.com/seu-usuario/codecast.git
-
-# 2) Acesse a pasta do projeto
-cd codecast
-
-# 3) Instale as dependências
 npm install
-
-# 4) Rode o servidor de desenvolvimento
 npm run dev
 ```
 
-O site estará disponível em `http://localhost:8080`
-
-### Variáveis de ambiente
-Crie um arquivo `.env` na raiz do projeto com:
+Se quiser exibir métricas reais do YouTube no Dashboard, crie um arquivo `.env` com:
 
 ```
-VITE_YOUTUBE_API_KEY=coloque_sua_chave_aqui
-VITE_YOUTUBE_CHANNEL_ID=seu_channel_id
+VITE_YOUTUBE_API_KEY= sua_chave
+VITE_YOUTUBE_CHANNEL_ID= seu_channel_id
 ```
 
-Não faça commit do `.env`. Um arquivo `env.example` pode ser fornecido localmente para referência.
-
-## 🔎 SEO
-
-O projeto já inclui otimizações no `index.html`:
-
-- Meta `description`, `author` e `robots`
-- Link `canonical` e `hreflang` (`pt-BR`)
-- Open Graph: `og:title`, `og:description`, `og:type`, `og:url`, `og:site_name`, `og:image`
-- Twitter Cards: `twitter:card`, `twitter:site`, `twitter:title`, `twitter:description`, `twitter:image`
-- JSON-LD (`application/ld+json`): tipos `Organization` e `WebSite`
-- `robots.txt` e `sitemap.xml` em `public/` apontando para `https://code-cast-two.vercel.app/`
-
-Recomendado:
-
-- Gerar uma imagem social (`public/og-image.jpg`) e apontar nas metas `og:image`/`twitter:image`
-- Ajustar domínios finais (produção) no `canonical`, `og:url`, JSON-LD e `robots.txt`/`sitemap.xml`
-- Monitorar cobertura no Google Search Console
-
-## 🛠️ Tecnologias
-
-- **Frontend**: React 18 + TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui + Radix UI
-- **Icons**: Lucide React
-- **Routing**: React Router DOM
-- **State Management**: React Query
-
-## 📱 Funcionalidades
-
-- ✅ Design responsivo com tema cyberpunk/terminal
-- ✅ Seção de apresentadores com GitHub-style cards
-- ✅ Episódios com integração ao YouTube
-- ✅ Convidados em destaque com carrossel
-- ✅ Links para redes sociais (Instagram, YouTube, TikTok)
-- ✅ Navegação suave entre seções
-- ✅ Animações e efeitos neon
-
-## 🎯 Seções do Site
-
-1. **Hero** - Apresentação principal com efeito de digitação
-2. **Apresentadores** - Cards dos hosts Luiz e André
-3. **Sobre** - Informações sobre o podcast
-4. **Episódios** - Lista de todos os episódios
-5. **Convidados** - Destaque dos convidados especiais
-6. **Contato** - Links para redes sociais
-
-## 📦 Scripts Disponíveis
-
-```bash
-npm run dev          # Servidor de desenvolvimento
-npm run build        # Build para produção
-npm run preview      # Preview do build
-npm run lint         # Verificar código com ESLint
-```
-
-## 🌐 Deploy
-
-O projeto está configurado para deploy em qualquer plataforma que suporte aplicações React/Vite:
-
-- Vercel
-- Netlify
-- GitHub Pages
-- Surge.sh
+Sem essas variáveis, o site funciona normalmente com dados de demonstração no Dashboard.
 
 ## 📞 Contato
 
-- **Instagram**: [@codecast_unimar](https://www.instagram.com/codecast_unimar/)
-- **YouTube**: [@codecast_unimar](https://www.youtube.com/@codecast_unimar)
-- **TikTok**: [@codecast_unimar](https://www.tiktok.com/@codecast_unimar)
+- Instagram: https://www.instagram.com/codecast_unimar/
+- YouTube: https://www.youtube.com/@codecast_unimar
+- TikTok: https://www.tiktok.com/@codecast_unimar
 
-## 📄 Licença
+## 📄 Direitos
 
-Este projeto é propriedade da UNIMAR (Universidade de Marília) e do CodeCast.
+Conteúdo do CodeCast — UNIMAR e equipe do podcast.
