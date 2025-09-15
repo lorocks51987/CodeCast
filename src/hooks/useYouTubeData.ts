@@ -101,9 +101,13 @@ export const useYouTubeData = () => {
         setIsLoading(true);
         setError(null);
 
-        // Configurações da API do YouTube
-        const API_KEY = 'AIzaSyD7SG7cscw9BbLEb54kttQJLxMHhe9lGec';
-        const CHANNEL_ID = 'UCAHl0uSUDCKWJkHrB8zzaTA';
+        // Configurações da API do YouTube via variáveis de ambiente (Vite)
+        const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY as string | undefined;
+        const CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID as string | undefined;
+
+        if (!API_KEY || !CHANNEL_ID) {
+          throw new Error('Variáveis de ambiente VITE_YOUTUBE_API_KEY/VITE_YOUTUBE_CHANNEL_ID não configuradas');
+        }
 
         // Buscar estatísticas do canal
         const channelResponse = await fetch(

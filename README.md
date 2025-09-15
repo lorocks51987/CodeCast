@@ -28,6 +28,33 @@ npm run dev
 
 O site estará disponível em `http://localhost:8080`
 
+### Variáveis de ambiente
+Crie um arquivo `.env` na raiz do projeto com:
+
+```
+VITE_YOUTUBE_API_KEY=coloque_sua_chave_aqui
+VITE_YOUTUBE_CHANNEL_ID=seu_channel_id
+```
+
+Não faça commit do `.env`. Um arquivo `env.example` pode ser fornecido localmente para referência.
+
+## 🔎 SEO
+
+O projeto já inclui otimizações no `index.html`:
+
+- Meta `description`, `author` e `robots`
+- Link `canonical` e `hreflang` (`pt-BR`)
+- Open Graph: `og:title`, `og:description`, `og:type`, `og:url`, `og:site_name`, `og:image`
+- Twitter Cards: `twitter:card`, `twitter:site`, `twitter:title`, `twitter:description`, `twitter:image`
+- JSON-LD (`application/ld+json`): tipos `Organization` e `WebSite`
+- `robots.txt` e `sitemap.xml` em `public/` apontando para `https://code-cast-two.vercel.app/`
+
+Recomendado:
+
+- Gerar uma imagem social (`public/og-image.jpg`) e apontar nas metas `og:image`/`twitter:image`
+- Ajustar domínios finais (produção) no `canonical`, `og:url`, JSON-LD e `robots.txt`/`sitemap.xml`
+- Monitorar cobertura no Google Search Console
+
 ## 🛠️ Tecnologias
 
 - **Frontend**: React 18 + TypeScript
